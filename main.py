@@ -16,8 +16,9 @@ class MyTestCase(unittest.TestCase):
         list_careers = main_page.get_career_catalog()
         # Write a csv file with the data
         main_page.save_career_catalog(list_careers)
-        '''# Get a list of Complementary Subjects for each career. (Bonus exercise)
-        main_page.get_complementary_subjects()'''
+        # Get a list of Complementary Subjects for each career. (Bonus exercise)
+        list_complementary_subjects = main_page.get_complementary_subjects()
+        main_page.save_complementary_sub(list_complementary_subjects)
 
     def tearDown(self):
         self.driver.close()

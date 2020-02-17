@@ -12,11 +12,5 @@ class BasePageElement(object):
         driver.find_elements_by_xpath(self.locator).clear()
         driver.find_elements_by_xpath(self.locator).send_keys(value)
 
-    def __get__(self, obj, owner):
-        """Gets the text of the specified object"""
-        driver = obj.driver
-        WebDriverWait(driver, 100).until(
-            lambda driver: driver.find_elements_by_xpath(self.locator))
-        element = driver.find_elements_by_xpath(self.locator)
-
-        return element.get_attribute("value")
+    def __get__(self, obj, cls=None):
+        pass
