@@ -1,0 +1,9 @@
+Selenium Test
+Approach to solve the exercise
+Use of page objects design pattern
+To solve the principal exercise (get the career catalog) the page object design pattern was used because it allows to give the code in order and many functions separated. The main files used were "page.py" and "locators.py" because they contain sentences that help to obtain the content of the requested page.
+Locators
+Two classes were declared to obtain the locators, one to obtain the catalog of careers and another for the exercise that extracts the complementary subjects by career.
+Proposed solution
+To locate the items on the page provided, a Chrome extension called "Xpath helper" was used. The main route used allows obtaining all the faculties that are in ESPOL (name of the faculty and their initials), these initials allowed to find the careers belonging to a faculty concatenating it with the name of a "collapsible" component to obtain the id of the container. This process helped to obtain each of the elements that will be saved in the file (names of careers, links, and codes).
+The list of faculties is traversed and within this process the list of careers by faculty is traversed to finally save the data in the csv file. The process for the second exercise was similar, but 2 events were also considered to be able to access the curriculum of the race and to open the modality of all complementary subjects.
